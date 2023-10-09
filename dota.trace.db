@@ -748,3 +748,10 @@ org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1309)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1298)
 	at com.pjomtech.dotaretriever.DotaRetrieverApplication.main(DotaRetrieverApplication.java:18)
+2023-10-08 20:47:18 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * FROM RAMPAGE r INNER JOIN hero h ON r.hero_id =[*]= h.id"; expected "ALL (, ANY (, SOME ("; SQL statement:
+SELECT * FROM RAMPAGE r INNER JOIN hero h ON r.hero_id == h.id [42001-214]
+2023-10-08 22:35:45 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "[*]get rampages\000d\000aSELECT * FROM RAMPAGE r INNER JOIN hero h ON r.hero_id = h.id"; expected "GRANT"; SQL statement:
+get rampages
+SELECT * FROM RAMPAGE r INNER JOIN hero h ON r.hero_id = h.id [42001-214]

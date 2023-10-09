@@ -29,7 +29,7 @@ public class Hero {
      * }
      */
     @Id
-    private Long id;
+    private Integer id;
     private String name;
     @Column(name = "localized_name")
     @JsonProperty("localized_name")

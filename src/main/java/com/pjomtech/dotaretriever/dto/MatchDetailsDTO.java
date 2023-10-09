@@ -11,6 +11,10 @@ public class MatchDetailsDTO {
     private Long matchId;
     @JsonProperty("game_mode")
     private String gameMode;
+
+    @JsonProperty("start_time")
+    private Long startTime;
+
     @JsonProperty("replay_url")
     private String replayUrl;
     private List<MatchDetailsPlayerDTO> players;

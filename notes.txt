@@ -1,0 +1,2 @@
+get rampages
+SELECT * FROM RAMPAGE r INNER JOIN hero h ON r.hero_id = h.id;
