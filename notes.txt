@@ -1,3 +1,4 @@
 get rampages
-SELECT * FROM RAMPAGE r INNER JOIN hero h ON r.hero_id = h.id;
-SELECT r.match_id, h.localized_name FROM RAMPAGE r INNER JOIN hero h ON r.hero_id = h.id;
+SELECT r.match_id, r.start_time, h.localized_name as hero
+FROM rampage r INNER JOIN hero h ON r.hero_id = h.id
+ORDER BY r.start_time;
