@@ -20,7 +20,7 @@ public class Rampage {
     @NotNull
     private Long matchId;
 
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "hero_id")
     private Hero hero;
 

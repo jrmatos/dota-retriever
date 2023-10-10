@@ -28,7 +28,7 @@ public class AnalyzerService {
 
 
     @Scheduled(fixedDelay = 2 * 1000) // every 2 seconds
-    public void collector() {
+    public void collector() throws InterruptedException {
         log.info("Running collector...");
         Optional<ParsedMatch> uncheckedParsedMatchOptional = parsedMatchRepository.findFirstByChecked(false);
 
@@ -51,7 +51,12 @@ public class AnalyzerService {
 
             uncheckedParsedMatch.setChecked(true);
             parsedMatchRepository.save(uncheckedParsedMatch);
+
+            return;
         }
+
+        log.info("Nothing found. Waiting 100 seconds to try again...");
+        Thread.sleep(100000);
     }
 
     private void runCheckers(MatchDetailsDTO matchDetails) {
