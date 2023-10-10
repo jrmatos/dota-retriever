@@ -1,4 +1,5 @@
 get rampages
+
 SELECT r.match_id, r.start_time, h.localized_name as hero
 FROM rampage r INNER JOIN hero h ON r.hero_id = h.id
 ORDER BY r.start_time;
